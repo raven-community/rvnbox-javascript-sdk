@@ -1,0 +1,29 @@
+{
+  "name": "address-details",
+  "version": "1.0.0",
+  "description": "Get details about an address",
+  "main": "address-details.js",
+  "scripts": {
+    "test": "echo no tests yet",
+    "start": "node address-details.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MSFTserver/rvnbox-javascript-sdk.git"
+  },
+  "keywords": [
+    "rvnbox",
+    "example",
+    "rvn",
+    "ravencoin",
+    "raven coin",
+    "ravencoin.online",
+    "javascript"
+  ],
+  "author": "MSFTserver",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MSFTserver/rvnbox-javascript-sdk/issues"
+  },
+  "homepage": "https://github.com/MSFTserver/rvnbox-javascript-sdk/blob/master/README.md"
+}

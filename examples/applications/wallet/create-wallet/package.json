@@ -1,0 +1,29 @@
+{
+  "name": "create-wallet",
+  "version": "1.0.0",
+  "description": "Create an HDNode wallet",
+  "main": "create-wallet.js",
+  "scripts": {
+    "test": "echo no tests yet",
+    "start": "node create-wallet.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MSFTserver/rvnbox-javascript-sdk.git"
+  },
+  "keywords": [
+    "rvnbox",
+    "example",
+    "rvn",
+    "ravencoin",
+    "raven coin",
+    "ravencoin.online",
+    "javascript"
+  ],
+  "author": "MSFTserver",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MSFTserver/rvnbox-javascript-sdk/issues"
+  },
+  "homepage": "https://github.com/MSFTserver/rvnbox-javascript-sdk/blob/master/README.md"
+}
