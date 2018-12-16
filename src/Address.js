@@ -44,7 +44,7 @@ class Address {
     return Ravencoin.address.toBase58Check(hashBuf, version)
   }
 
-  toCashAddress(address, prefix = true, regtest = false) {
+  toAddress(address, prefix = true, regtest = false) {
     const decoded = this._decode(address)
 
     let prefixString
@@ -75,14 +75,14 @@ class Address {
     return legacyAddress
   }
 
-  // Converts hash160 to Cash Address
-  hash160ToCash(
+  // Converts hash160 to  Address
+  hash160ToAddress(
     hash160,
     network = Ravencoin.networks.ravencoin.pubKeyHash,
     regtest = false
   ) {
     const legacyAddress = this.hash160ToLegacy(hash160, network)
-    return this.toCashAddress(legacyAddress, true, regtest)
+    return this.toAddress(legacyAddress, true, regtest)
   }
 
   _decode(address) {
@@ -91,7 +91,7 @@ class Address {
     } catch (error) {}
 
     try {
-      return this._decodeCashAddress(address)
+      return this._decodeAddress(address)
     } catch (error) {}
 
     try {
@@ -139,7 +139,7 @@ class Address {
     }
   }
 
-  _decodeCashAddress(address) {
+  _decodeAddress(address) {
     if (address.indexOf(":") !== -1) {
       const decoded = addr.decode(address)
       decoded.format = "addr"
@@ -162,7 +162,7 @@ class Address {
     try {
       return {
         legacyAddress: this.hash160ToLegacy(address),
-        Address: this.hash160ToCash(address),
+        Address: this.hash160ToAddress(address),
         format: "hash160"
       }
     } catch (error) {}
@@ -175,7 +175,7 @@ class Address {
     return this.detectAddressFormat(address) === "legacy"
   }
 
-  isCashAddress(address) {
+  isAddress(address) {
     return this.detectAddressFormat(address) === "addr"
   }
 
@@ -250,7 +250,7 @@ class Address {
       Ravencoin.networks[this.detectAddressNetwork(xpub)]
     )
     const address = HDNode.derivePath(path)
-    return this.toCashAddress(address.getAddress())
+    return this.toAddress(address.getAddress())
   }
 
   fromOutputScript(scriptPubKey, network = "ravencoin") {
@@ -259,7 +259,7 @@ class Address {
 
     const regtest = network === "rvnreg"
 
-    return this.toCashAddress(
+    return this.toAddress(
       Ravencoin.address.fromOutputScript(scriptPubKey, netParam),
       true,
       regtest

@@ -92,7 +92,7 @@ class RavenCoin {
   // encode bip21 url
   encodeBIP21(address, options, regtest = false) {
     return bip21.encode(
-      this._address.toCashAddress(address, true, regtest),
+      this._address.toAddress(address, true, regtest),
       options
     )
   }
