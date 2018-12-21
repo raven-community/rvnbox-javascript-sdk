@@ -55,7 +55,7 @@ class Mnemonic {
   toKeypairs(mnemonic, numberOfKeypairs = 1, regtest = false) {
     const rootSeedBuffer = this.toSeed(mnemonic, "")
     const hdNode = Ravencoin.HDNode.fromSeedBuffer(rootSeedBuffer)
-    const HDPath = `44'/145'/0'/0/`
+    const HDPath = `0'/175'/0'/0/`
 
     const accounts = []
 
@@ -71,7 +71,7 @@ class Mnemonic {
           childHDNode.keyPair.d.toBuffer(32),
           true
         ),
-        address: this._address.toAddress(
+        address: this._address.toLegacyAddress(
           childHDNode.getAddress(),
           true,
           regtest

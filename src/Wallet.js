@@ -8,49 +8,49 @@ class Wallet {
     this.rvnWalletBridge.walletProvider = walletProvider
   }
 
-  getAddress(changeType, index, dAppId) {
-    return this.rvnWalletBridge.getAddress(changeType, index, dAppId)
+  // getAssetAddress(changeType, index, asset) {
+  //   return this.rvnWalletBridge.getAddress(changeType, index, asset)
+  // }
+  //
+  // getAssetAddressIndex(changeType, asset) {
+  //   return this.rvnWalletBridge.getAddressIndex(changeType, asset)
+  // }
+  //
+  // getAssetAddresses(changeType, startIndex, size, asset) {
+  //   return this.rvnWalletBridge.getAddresses(
+  //     changeType,
+  //     startIndex,
+  //     size,
+  //     asset
+  //   )
+  // }
+
+  getRedeemScript(p2shAddress, txid) {
+    return this.rvnWalletBridge.getRedeemScript(p2shAddress, txid)
   }
 
-  getAddressIndex(changeType, dAppId) {
-    return this.rvnWalletBridge.getAddressIndex(changeType, dAppId)
+  getRedeemScripts(txid) {
+    return this.rvnWalletBridge.getRedeemScripts(txid)
   }
 
-  getAddresses(changeType, startIndex, size, dAppId) {
-    return this.rvnWalletBridge.getAddresses(
-      changeType,
-      startIndex,
-      size,
-      dAppId
-    )
+  addRedeemScript(redeemScript, txid) {
+    return this.rvnWalletBridge.addRedeemScript(redeemScript, txid)
   }
 
-  getRedeemScript(p2shAddress, dAppId) {
-    return this.rvnWalletBridge.getRedeemScript(p2shAddress, dAppId)
+  getUtxos(address) {
+    return this.rvnWalletBridge.getUtxos(address)
   }
 
-  getRedeemScripts(dAppId) {
-    return this.rvnWalletBridge.getRedeemScripts(dAppId)
-  }
-
-  addRedeemScript(redeemScript, dAppId) {
-    return this.rvnWalletBridge.addRedeemScript(redeemScript, dAppId)
-  }
-
-  getUtxos(dAppId) {
-    return this.rvnWalletBridge.getUtxos(dAppId)
-  }
-
-  getBalance(dAppId) {
-    return this.rvnWalletBridge.getBalance(dAppId)
+  getBalance(address) {
+    return this.rvnWalletBridge.getBalance(address)
   }
 
   sign(address, dataToSign) {
     return this.rvnWalletBridge.sign(address, dataToSign)
   }
 
-  buildTransaction(outputs, dAppId) {
-    return this.rvnWalletBridge.buildTransaction(outputs, dAppId)
+  buildTransaction(outputs, address) {
+    return this.rvnWalletBridge.buildTransaction(outputs, address)
   }
 
   getProtocolVersion() {
@@ -63,14 +63,6 @@ class Wallet {
 
   getFeePerByte() {
     return this.rvnWalletBridge.getFeePerByte()
-  }
-
-  getDefaultDAppId() {
-    return this.rvnWalletBridge.getDefaultDAppId()
-  }
-
-  setDefaultDAppId(dAppId) {
-    return this.rvnWalletBridge.setDefaultDAppId(dAppId)
   }
 }
 

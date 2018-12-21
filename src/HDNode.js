@@ -23,9 +23,9 @@ class HDNode {
     return hdNode.getAddress()
   }
 
-  toAddress(hdNode, regtest = false) {
-    return this._address.toAddress(hdNode.getAddress(), true, regtest)
-  }
+  // toRvn2Address(hdNode, regtest = false) {
+  //   return this._address.toRvn2Address(hdNode.getAddress(), true, regtest)
+  // }
 
   toWIF(hdNode) {
     return hdNode.keyPair.toWIF()

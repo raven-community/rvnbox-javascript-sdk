@@ -25,7 +25,7 @@ class Control {
   }
   //
   // stop() {
-  //   // Stop Ravencoin server.
+  //   // Stop RAvencoin server.
   //   return axios.post(`${this.restURL}control/stop`)
   //   .then((response) => {
   //     return response.data;

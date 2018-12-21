@@ -45,9 +45,9 @@ class ECPair {
     return ecpair.getAddress()
   }
 
-  static toAddress(ecpair, regtest = false) {
-    return ECPair._address.toAddress(ecpair.getAddress(), true, regtest)
-  }
+  // static toRvn2Address(ecpair, regtest = false) {
+  //   return ECPair._address.toRvn2Address(ecpair.getAddress(), true, regtest)
+  // }
 }
 
 export default ECPair

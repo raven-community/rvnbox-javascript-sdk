@@ -20,7 +20,7 @@ import Price from "./Price"
 import Socket from "./Socket"
 import Wallet from "./Wallet"
 
-class RVNBOXSDK {
+class BITBOXSDK {
   constructor(config) {
     if (config && config.restURL && config.restURL !== "")
       this.restURL = config.restURL
@@ -51,4 +51,4 @@ class RVNBOXSDK {
   }
 }
 
-export default RVNBOXSDK
+export default BITBOXSDK

@@ -2,12 +2,12 @@ export declare interface Address {
     restURL: string;
     //constructor(restURL: string);
     toLegacyAddress(address: string): string;
-    toAddress(address: string, prefix?: boolean, regtest?: boolean): string;
+    // toRvn2Address(address: string, prefix?: boolean, regtest?: boolean): string;
     toHash160(address: string): string;
     hash160ToLegacy(hash160: string, network?: number): string;
-    hash160ToAddr(hash160: string, network?: number, regtest?: boolean): string;
+    hash160ToCash(hash160: string, network?: number, regtest?: boolean): string;
     isLegacyAddress(address: string): boolean;
-    isAddress(address: string): boolean;
+    // isRvn2Address(address: string): boolean;
     isMainnetAddress(address: string): boolean;
     isTestnetAddress(address: string): boolean;
     isRegTestAddress(address: string): boolean;
@@ -25,18 +25,18 @@ export declare interface Address {
 
 export declare interface AddressDetailsResult {
     balance: number;
-    balanceSat: number;
+    balanceCorb: number;
     totalReceived: number;
-    totalReceivedSat: number;
+    totalReceivedCorb: number;
     totalSent: number;
-    totalSentSat: number;
+    totalSentCorb: number;
     unconfirmedBalance: number;
-    unconfirmedBalanceSat: number;
+    unconfirmedBalanceCorb: number;
     unconfirmedTxApperances: number;
     txApperances: number;
     transactions: string[];
     legacyAddress: string;
-    Address: string;
+    // rvn2Address: string;
 }
 
 export declare interface AddressUtxoResult {
@@ -48,7 +48,7 @@ export declare interface AddressUtxoResult {
     height: number;
     confirmations: number;
     legacyAddress: string;
-    Address: string;
+    // rvn2Address: string;
 }
 
 export declare interface AddressUnconfirmedResult {
@@ -60,5 +60,5 @@ export declare interface AddressUnconfirmedResult {
     confirmations: number;
     ts: number;
     legacyAddress: string;
-    Address: string;
+    // rvn2Address: string;
 }

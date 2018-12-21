@@ -26,7 +26,7 @@ declare class RVNBOXSDK {
 
 	restURL: string;
 	Address: Address;
-	RavenCoin: RavenCoin;
+	BitcoinCash: BitcoinCash;
 	Block: Block;
 	Blockchain: Blockchain;
 	Control: Control;

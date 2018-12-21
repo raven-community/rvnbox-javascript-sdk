@@ -6,8 +6,8 @@ export declare interface HDNode {
   fromSeed(rootSeedBuffer: Buffer, network?: string): HDNode
   toLegacyAddress(): string
   toLegacyAddress(hdNode: HDNode): string
-  toAddress(): string
-  toAddress(hdNode: HDNode, regtest?: boolean): string
+  // toRvn2Address(): string
+  // toRvn2Address(hdNode: HDNode, regtest?: boolean): string
   toWIF(): string
   toWIF(hdNode: HDNode): string
   toXPub(): string

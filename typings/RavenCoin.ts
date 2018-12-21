@@ -1,8 +1,8 @@
-export declare interface BitcoinCash {
+export declare interface RavenCoin {
 	toCorbe(coins: number): number;
-	toRavencoin(corbes: number): number;
-	toBits(corbes: number): number;
-	corbeToBits(corbes: number): number;
+	toRavencoin(corbe: number): number;
+	toBits(corbe: number): number;
+	corbeToBits(corbe: number): number;
 	signMessageWithPrivKey(privateKeyWIF: string, message: string): string;
 	verifyMessage(address : string, signature: string, message: string): Boolean;
 	encodeBase58Check(hex: string): string;

@@ -13,7 +13,7 @@ class Price {
       const response = await axios.get(
         `https://api.coinmarketcap.com/v2/ticker/2577/?convert=${currency}`
       )
-      return response.data.quotes.[currency].price / 100.0
+      return response.data.quotes[currency];
     } catch (error) {
       if (error.response && error.response.data) throw error.response.data
       else throw error

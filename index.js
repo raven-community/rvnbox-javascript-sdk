@@ -18,7 +18,7 @@ const RVNBOXSDK = require("./lib/rvnbox-sdk").default
 const clone = require("git-clone")
 const cmd = require("node-cmd")
 
-program.version("1.0.0 ", "-v, --version")
+program.version("2.2.6 ", "-v, --version")
 
 program
   .command("new <name>")
@@ -54,17 +54,17 @@ program
       let repo
       const conf = {}
       if (scaffold === "node") {
-        repo = "https://github.com/Bitcoin-com/rvnbox-scaffold-node.git"
+        repo = "https://github.com/raven-community/rvnbox-scaffold-node.git"
       } else if (scaffold === "angular") {
-        repo = "https://github.com/Bitcoin-com/rvnbox-scaffold-angular.git"
+        repo = "https://github.com/raven-community/rvnbox-scaffold-angular.git"
       } else if (scaffold === "next") {
-        repo = "https://github.com/Bitcoin-com/rvnbox-scaffold-next.git"
+        repo = "https://github.com/raven-community/rvnbox-scaffold-next.git"
       } else if (scaffold === "react") {
-        repo = "https://github.com/Bitcoin-com/rvnbox-scaffold-react.git"
+        repo = "https://github.com/raven-community/rvnbox-scaffold-react.git"
       } else if (scaffold === "vue") {
-        repo = "https://github.com/Bitcoin-com/rvnbox-scaffold-vue.git"
+        repo = "https://github.com/raven-community/rvnbox-scaffold-vue.git"
       } else if (scaffold === "websockets") {
-        repo = "https://github.com/Bitcoin-com/rvnbox-scaffold-websockets.git"
+        repo = "https://github.com/raven-community/rvnbox-scaffold-websockets.git"
       } else {
         console.log(chalk.red(`Scaffold ${scaffold} not supported`))
         process.exit(1)

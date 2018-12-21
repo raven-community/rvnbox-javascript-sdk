@@ -18,6 +18,6 @@ export declare interface ECPair {
   toPublicKey(ecpair: ECPair): Buffer;
   toLegacyAddress(): string;
   toLegacyAddress(ecpair: ECPair): string;
-  toAddress(): string;
-  toAddress(ecpair: ECPair, regtest?: boolean): string;
+  // toRvn2Address(): string;
+  // toRvn2Address(ecpair: ECPair, regtest?: boolean): string;
 }

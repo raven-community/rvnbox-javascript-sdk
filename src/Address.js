@@ -1,6 +1,6 @@
 import axios from "axios"
 import Ravencoin from "ravencoinjs-lib"
-import addr from "rvnaddrjs"
+// import rvn2addr from "rvn2addrjs"
 import coininfo from "coininfo"
 
 class Address {
@@ -44,22 +44,22 @@ class Address {
     return Ravencoin.address.toBase58Check(hashBuf, version)
   }
 
-  toAddress(address, prefix = true, regtest = false) {
-    const decoded = this._decode(address)
-
-    let prefixString
-    if (regtest) prefixString = "rvnreg"
-    else prefixString = decoded.prefix
-
-    const Address = addr.encode(
-      prefixString,
-      decoded.type,
-      decoded.hash
-    )
-
-    if (prefix) return Address
-    return Address.split(":")[1]
-  }
+  // toRvn2Address(address, prefix = true, regtest = false) {
+  //   const decoded = this._decode(address)
+  //
+  //   let prefixString
+  //   if (regtest) prefixString = "rvnreg"
+  //   else prefixString = decoded.prefix
+  //
+  //   const rvn2Address = rvn2addr.encode(
+  //     prefixString,
+  //     decoded.type,
+  //     decoded.hash
+  //   )
+  //
+  //   if (prefix) return rvn2Address
+  //   return rvn2Address.split(":")[1]
+  // }
 
   // Converts any address format to hash160
   toHash160(address) {
@@ -75,24 +75,24 @@ class Address {
     return legacyAddress
   }
 
-  // Converts hash160 to  Address
-  hash160ToAddress(
-    hash160,
-    network = Ravencoin.networks.ravencoin.pubKeyHash,
-    regtest = false
-  ) {
-    const legacyAddress = this.hash160ToLegacy(hash160, network)
-    return this.toAddress(legacyAddress, true, regtest)
-  }
+  // Converts hash160 to Rvn2 Address
+  // hash160ToRvn2(
+  //   hash160,
+  //   network = Ravencoin.networks.ravencoin.pubKeyHash,
+  //   regtest = false
+  // ) {
+  //   const legacyAddress = this.hash160ToLegacy(hash160, network)
+  //   return this.toRvn2Address(legacyAddress, true, regtest)
+  // }
 
   _decode(address) {
     try {
       return this._decodeLegacyAddress(address)
     } catch (error) {}
 
-    try {
-      return this._decodeAddress(address)
-    } catch (error) {}
+    // try {
+    //   return this._decodeRvn2Address(address)
+    // } catch (error) {}
 
     try {
       return this._encodeAddressFromHash160(address)
@@ -139,30 +139,30 @@ class Address {
     }
   }
 
-  _decodeAddress(address) {
-    if (address.indexOf(":") !== -1) {
-      const decoded = addr.decode(address)
-      decoded.format = "addr"
-      return decoded
-    }
-
-    const prefixes = ["ravencoin", "rvntest", "rvnreg"]
-    for (let i = 0; i < prefixes.length; ++i) {
-      try {
-        const decoded = addr.decode(`${prefixes[i]}:${address}`)
-        decoded.format = "addr"
-        return decoded
-      } catch (error) {}
-    }
-
-    throw new Error(`Invalid format : ${address}`)
-  }
+  // _decodeRvn2Address(address) {
+  //   if (address.indexOf(":") !== -1) {
+  //     const decoded = rvn2addr.decode(address)
+  //     decoded.format = "rvn2addr"
+  //     return decoded
+  //   }
+  //
+  //   const prefixes = ["ravencoin", "rvntest", "rvnreg"]
+  //   for (let i = 0; i < prefixes.length; ++i) {
+  //     try {
+  //       const decoded = rvn2addr.decode(`${prefixes[i]}:${address}`)
+  //       decoded.format = "rvn2addr"
+  //       return decoded
+  //     } catch (error) {}
+  //   }
+  //
+  //   throw new Error(`Invalid format : ${address}`)
+  // }
 
   _encodeAddressFromHash160(address) {
     try {
       return {
         legacyAddress: this.hash160ToLegacy(address),
-        Address: this.hash160ToAddress(address),
+        // rvn2Address: this.hash160ToRvn2(address),
         format: "hash160"
       }
     } catch (error) {}
@@ -175,9 +175,9 @@ class Address {
     return this.detectAddressFormat(address) === "legacy"
   }
 
-  isAddress(address) {
-    return this.detectAddressFormat(address) === "addr"
-  }
+  // isRvn2Address(address) {
+  //   return this.detectAddressFormat(address) === "rvn2addr"
+  // }
 
   isHash160(address) {
     return this.detectAddressFormat(address) === "hash160"
@@ -250,7 +250,7 @@ class Address {
       Ravencoin.networks[this.detectAddressNetwork(xpub)]
     )
     const address = HDNode.derivePath(path)
-    return this.toAddress(address.getAddress())
+    return this.toLegacyAddress(address.getAddress())
   }
 
   fromOutputScript(scriptPubKey, network = "ravencoin") {
@@ -259,7 +259,7 @@ class Address {
 
     const regtest = network === "rvnreg"
 
-    return this.toAddress(
+    return this.toLegacyAddress(
       Ravencoin.address.fromOutputScript(scriptPubKey, netParam),
       true,
       regtest

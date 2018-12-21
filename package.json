@@ -1,8 +1,8 @@
 {
   "name": "rvnbox-sdk",
-  "version": "1.0.0",
-  "description": "RVNBOX Javascript SDK for Ravencoin",
-  "author": "MSFTserver",
+  "version": "2.2.6",
+  "description": "BITBOX Javascript SDK for Bitcoin Cash",
+  "author": "Gabriel Cardona @ Bitcoin.com",
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha --timeout 30000 --require babel-core/register",
@@ -16,6 +16,7 @@
   "bin": {
     "rvnbox": "./index.js"
   },
+  "homepage": "https://developer.ravencoin.online/rvnbox",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/raven-community/rvnbox-javascript-sdk.git"
@@ -28,13 +29,13 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.26.0",
     "bigi": "^1.4.2",
-    "bip21": "github:raven-community/bip21#master",
+    "bip21": "gtihub:raven-community/bip21#master",
     "bip32-utils": "github:raven-community/bip32-utils#master",
     "bip38": "^2.0.2",
     "bip39": "^2.5.0",
     "bip66": "^1.1.5",
     "bc-bip68": "^1.0.5",
-    "ravencoin-ops": "github:raven-community/bitcoincash-ops#master",
+    "ravencoin-ops": "github:raven-community/ravencoin-ops#master",
     "ravencoin-txdecoder": "github:raven-community/ravencoin-txdecoder#master",
     "ravencoinjs-lib": "github:raven-community/ravencoinjs-lib#master",
     "ravencoinjs-message": "github:raven-community/ravencoinjs-message#master",
@@ -57,7 +58,7 @@
     "randombytes": "^2.0.6",
     "repl.history": "^0.1.4",
     "safe-buffer": "^5.1.2",
-    "corbe-ravencoin": "github:raven-community/corbe-ravencoin#master",
+    "satoshi-bitcoin": "^1.0.4",
     "socket.io": "^2.1.1",
     "socket.io-client": "^2.1.1",
     "touch": "^3.1.0",

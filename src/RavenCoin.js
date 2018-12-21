@@ -20,19 +20,19 @@ class RavenCoin {
   }
 
   // Translate corbe to coin value
-  toRavenCoin(corbes) {
-    return sb.toRavencoin(corbes)
+  toRavencoin(corbe) {
+    return sb.toRavencoin(corbe)
   }
 
   // Translate corbe to bits denomination
-  toBits(corbes) {
-    return parseFloat(corbes) / 100
+  toBits(corbe) {
+    return parseFloat(corbe) / 100
   }
 
   // Translate corbe to bits denomination
   // TODO remove in 2.0
-  corbeToBits(corbes) {
-    return parseFloat(corbes) / 100
+  corbeToBits(corbe) {
+    return parseFloat(corbe) / 100
   }
 
   // Translate bits to corbe denomination
@@ -42,7 +42,7 @@ class RavenCoin {
   // }
   //
   // // Translate bits to corbe denomination
-  // corbeFromBits(bits) {
+  // corbesFromBits(bits) {
   //   return this.toInteger(bits * 100);
   // }
   //
@@ -92,7 +92,7 @@ class RavenCoin {
   // encode bip21 url
   encodeBIP21(address, options, regtest = false) {
     return bip21.encode(
-      this._address.toAddress(address, true, regtest),
+      this._address.toLegacyAddress(address, true, regtest),
       options
     )
   }

@@ -1,7 +1,7 @@
 import {Buffer} from 'buffer';
 
 export declare interface Script {
-    opcodes: opcodes; 
+    opcodes: opcodes;
     // nullData: null;
     // multisig: string;
     // pubKey: string;
@@ -104,15 +104,15 @@ declare interface opcodes {
   "OP_TUCK": 125,
 
   "OP_CAT": 126,
-  //"OP_SUBSTR": 127, -- replaced w/ OP_SPLIT see below
-  //"OP_LEFT": 128, -- replaced w/ OP_SPLIT see below
-  //"OP_RIGHT": 129, -- replaced w/ OP_SPLIT see below
+  "OP_SUBSTR": 127,
+  "OP_LEFT": 128,
+  "OP_RIGHT": 129,
   "OP_SIZE": 130,
 
   "OP_INVERT": 131,
-  "OP_AND": 132,    // May 2018 reenabled
-  "OP_OR": 133,     // May 2018 reenabled
-  "OP_XOR": 134,    // May 2018 reenabled
+  "OP_AND": 132,
+  "OP_OR": 133,
+  "OP_XOR": 134,
   "OP_EQUAL": 135,
   "OP_EQUALVERIFY": 136,
   "OP_RESERVED1": 137,
@@ -126,11 +126,12 @@ declare interface opcodes {
   "OP_ABS": 144,
   "OP_NOT": 145,
   "OP_0NOTEQUAL": 146,
+
   "OP_ADD": 147,
   "OP_SUB": 148,
   "OP_MUL": 149,
-  "OP_DIV": 150,    // May 2018 reenabled
-  "OP_MOD": 151,    // May 2018 reenabled
+  "OP_DIV": 150,
+  "OP_MOD": 151,
   "OP_LSHIFT": 152,
   "OP_RSHIFT": 153,
 
@@ -159,14 +160,11 @@ declare interface opcodes {
   "OP_CHECKMULTISIG": 174,
   "OP_CHECKMULTISIGVERIFY": 175,
 
-  "OP_NOP1": 176,
-  
-  "OP_NOP2": 177,
   "OP_CHECKLOCKTIMEVERIFY": 177,
 
+  "OP_NOP1": 176,
+  "OP_NOP2": 177,
   "OP_NOP3": 178,
-  "OP_CHECKSEQUENCEVERIFY": 178,
-  
   "OP_NOP4": 179,
   "OP_NOP5": 180,
   "OP_NOP6": 181,
@@ -175,16 +173,9 @@ declare interface opcodes {
   "OP_NOP9": 184,
   "OP_NOP10": 185,
 
+  "OP_RVN_ASSET": 192,
+
   "OP_PUBKEYHASH": 253,
   "OP_PUBKEY": 254,
   "OP_INVALIDOPCODE": 255
-
-  // May 2018 added opcodes
-  "OP_SPLIT": 127,
-  "OP_NUM2BIN": 128,
-  "OP_BIN2NUM": 129
-
-  // Nov 2018 enabled opcodes
-  // TBD
 }
-

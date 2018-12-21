@@ -1,4 +1,4 @@
-import Ravencoin from "ravencoinjs-lib"
+import RavenCoin from "ravencoinjs-lib"
 import coininfo from "coininfo"
 import bip66 from "bip66"
 import bip68 from "bc-bip68"
