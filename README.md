@@ -4,8 +4,8 @@
 
 Extensive documentation available at:
 
-- [General docs](https://developer.bitcoin.com)
-- [BITBOX API](https://developer.bitcoin.com/bitbox)
+- [General docs](https://developer.ravencoin.obnline)
+- [RVNBOX API](https://developer.ravencoin.online/rvnbox)
 
 Open Source / Creative Commons Listings
 
@@ -38,7 +38,7 @@ Open Source / Creative Commons Listings
 - [qrcode](https://www.npmjs.com/package/qrcode) - MIT
 - [randombytes](https://www.npmjs.com/package/randombytes) - MIT
 - [safe-buffer](https://www.npmjs.com/package/safe-buffer) - MIT
-- [corbe-ravencoin](https://www.npmjs.com/package/corbe-ravencoin) - MIT
+- [satoshi-ravencoin](https://www.npmjs.com/package/satoshi-ravencoin) - MIT
 - [sinon](https://www.npmjs.com/package/sinon) - BSD-3-Clause
 - [touch](https://www.npmjs.com/package/touch) - ISC
 
@@ -46,4 +46,4 @@ Open Source / Creative Commons Listings
 
 [Cube icon](https://fontawesome.com/icons/cube?style=solid) available under [CC v4.0](https://creativecommons.org/licenses/by/4.0/)
 
-[More info](https://developer.bitcoin.com/bitbox.html)
+[More info](https://developer.ravencoin.online/rvnbox.html)

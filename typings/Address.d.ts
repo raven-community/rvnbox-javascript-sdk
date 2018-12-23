@@ -5,7 +5,7 @@ export declare interface Address {
     // toRvn2Address(address: string, prefix?: boolean, regtest?: boolean): string;
     toHash160(address: string): string;
     hash160ToLegacy(hash160: string, network?: number): string;
-    hash160ToCash(hash160: string, network?: number, regtest?: boolean): string;
+    // hash160ToRvn2(hash160: string, network?: number, regtest?: boolean): string;
     isLegacyAddress(address: string): boolean;
     // isRvn2Address(address: string): boolean;
     isMainnetAddress(address: string): boolean;
@@ -25,13 +25,13 @@ export declare interface Address {
 
 export declare interface AddressDetailsResult {
     balance: number;
-    balanceCorb: number;
+    balanceSat: number;
     totalReceived: number;
-    totalReceivedCorb: number;
+    totalReceivedSat: number;
     totalSent: number;
-    totalSentCorb: number;
+    totalSentSat: number;
     unconfirmedBalance: number;
-    unconfirmedBalanceCorb: number;
+    unconfirmedBalanceSat: number;
     unconfirmedTxApperances: number;
     txApperances: number;
     transactions: string[];
@@ -44,7 +44,7 @@ export declare interface AddressUtxoResult {
     vout: number;
     scriptPubKey: string;
     amount: number;
-    corbes: number;
+    satoshis: number;
     height: number;
     confirmations: number;
     legacyAddress: string;
@@ -56,7 +56,7 @@ export declare interface AddressUnconfirmedResult {
     vout: number;
     scriptPubKey: string;
     amount: number;
-    corbes: number;
+    satoshis: number;
     confirmations: number;
     ts: number;
     legacyAddress: string;

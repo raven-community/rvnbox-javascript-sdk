@@ -1,8 +1,11 @@
 {
   "name": "rvnbox-sdk",
   "version": "2.2.6",
-  "description": "BITBOX Javascript SDK for Bitcoin Cash",
+  "description": "RVNBOX Javascript SDK for Ravencoin",
   "author": "Gabriel Cardona @ Bitcoin.com",
+  "contributors": [
+    "MSFTserver"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha --timeout 30000 --require babel-core/register",
@@ -58,7 +61,7 @@
     "randombytes": "^2.0.6",
     "repl.history": "^0.1.4",
     "safe-buffer": "^5.1.2",
-    "satoshi-bitcoin": "^1.0.4",
+    "satoshi-ravencoin": "github:raven-community/satoshi-ravencoin#master",
     "socket.io": "^2.1.1",
     "socket.io-client": "^2.1.1",
     "touch": "^3.1.0",

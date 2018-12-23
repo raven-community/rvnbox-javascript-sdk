@@ -1,5 +1,5 @@
 import Ravencoin from "ravencoinjs-lib"
-import sb from "corbe-ravencoin"
+import sb from "satoshi-ravencoin"
 import ravencoinMessage from "ravencoinjs-message"
 import bs58 from "bs58"
 import bip21 from "bip21"
@@ -14,35 +14,35 @@ class RavenCoin {
     this._address = address
   }
 
-  // Translate coins to corbe value
-  toCorbe(coins) {
-    return sb.toCorbe(coins)
+  // Translate coins to satoshi value
+  toSatoshi(coins) {
+    return sb.toSatoshi(coins)
   }
 
-  // Translate corbe to coin value
-  toRavencoin(corbe) {
-    return sb.toRavencoin(corbe)
+  // Translate satoshi to coin value
+  toRavencoin(satoshi) {
+    return sb.toRavencoin(satoshi)
   }
 
-  // Translate corbe to bits denomination
-  toBits(corbe) {
-    return parseFloat(corbe) / 100
+  // Translate satoshi to bits denomination
+  toBits(satoshi) {
+    return parseFloat(satoshi) / 100
   }
 
-  // Translate corbe to bits denomination
+  // Translate satoshi to bits denomination
   // TODO remove in 2.0
-  corbeToBits(corbe) {
-    return parseFloat(corbe) / 100
+  satoshiToBits(satoshi) {
+    return parseFloat(satoshi) / 100
   }
 
-  // Translate bits to corbe denomination
+  // Translate bits to satoshi denomination
   // TODO remove in 2.0
   // fromBits(bits) {
   //   return this.toInteger(bits * 100);
   // }
   //
-  // // Translate bits to corbe denomination
-  // corbesFromBits(bits) {
+  // // Translate bits to satoshi denomination
+  // satoshisFromBits(bits) {
   //   return this.toInteger(bits * 100);
   // }
   //

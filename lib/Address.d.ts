@@ -25,13 +25,13 @@ export declare interface Address {
 
 export declare interface AddressDetailsResult {
     balance: number;
-    balanceCorbe: number;
+    balanceSatoshi: number;
     totalReceived: number;
-    totalReceivedCorbe: number;
+    totalReceivedSatoshi: number;
     totalSent: number;
-    totalSentCorbe: number;
+    totalSentSatoshi: number;
     unconfirmedBalance: number;
-    unconfirmedBalanceCorbe: number;
+    unconfirmedBalanceSatoshi: number;
     unconfirmedTxApperances: number;
     txApperances: number;
     transactions: string[];
@@ -44,7 +44,7 @@ export declare interface AddressUtxoResult {
     vout: number;
     scriptPubKey: string;
     amount: number;
-    corbes: number;
+    satoshis: number;
     height: number;
     confirmations: number;
     legacyAddress: string;
@@ -56,7 +56,7 @@ export declare interface AddressUnconfirmedResult {
     vout: number;
     scriptPubKey: string;
     amount: number;
-    corbes: number;
+    satoshis: number;
     confirmations: number;
     ts: number;
     legacyAddress: string;
