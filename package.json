@@ -39,7 +39,7 @@
     "bip66": "^1.1.5",
     "bc-bip68": "^1.0.5",
     "ravencoin-ops": "github:raven-community/ravencoin-ops#master",
-    "ravencoin-txdecoder": "github:raven-community/ravencoin-txdecoder#master",
+    "ravencoin-txdecoder": "github:raven-community/node-ravencoin-txdecoder#master",
     "ravencoinjs-lib": "github:raven-community/ravencoinjs-lib#master",
     "ravencoinjs-message": "github:raven-community/ravencoinjs-message#master",
     "bs58": "^4.0.1",
