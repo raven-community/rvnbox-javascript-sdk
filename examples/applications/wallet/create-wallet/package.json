@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MSFTserver/rvnbox-javascript-sdk.git"
+    "url": "git+https://github.com/raven-community/rvnbox-javascript-sdk.git"
   },
   "keywords": [
     "rvnbox",
@@ -23,7 +23,7 @@
   "author": "MSFTserver",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MSFTserver/rvnbox-javascript-sdk/issues"
+    "url": "https://github.com/raven-community/rvnbox-javascript-sdk/issues"
   },
-  "homepage": "https://github.com/MSFTserver/rvnbox-javascript-sdk/blob/master/README.md"
+  "homepage": "https://github.com/raven-community/rvnbox-javascript-sdk/blob/master/README.md"
 }

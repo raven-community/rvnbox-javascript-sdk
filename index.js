@@ -18,7 +18,7 @@ const RVNBOXSDK = require("./lib/rvnbox-sdk").default
 const clone = require("git-clone")
 const cmd = require("node-cmd")
 
-program.version("2.2.6 ", "-v, --version")
+program.version("1.0.0 ", "-v, --version")
 
 program
   .command("new <name>")

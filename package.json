@@ -1,6 +1,6 @@
 {
   "name": "rvnbox-sdk",
-  "version": "2.2.6",
+  "version": "1.0.0",
   "description": "RVNBOX Javascript SDK for Ravencoin",
   "author": "Gabriel Cardona @ Bitcoin.com",
   "contributors": [
