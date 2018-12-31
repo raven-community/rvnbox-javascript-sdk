@@ -4,8 +4,8 @@
 
 Extensive documentation available at:
 
-- [General docs](https://developer.ravencoin.obnline)
-- [RVNBOX API](https://developer.ravencoin.online/rvnbox)
+- [General docs](http://developer.ravencoin.obnline)
+- [RVNBOX API](http://developer.ravencoin.online/rvnbox)
 
 Open Source / Creative Commons Listings
 
@@ -46,4 +46,4 @@ Open Source / Creative Commons Listings
 
 [Cube icon](https://fontawesome.com/icons/cube?style=solid) available under [CC v4.0](https://creativecommons.org/licenses/by/4.0/)
 
-[More info](https://developer.ravencoin.online/rvnbox.html)
+[More info](http://developer.ravencoin.online/rvnbox.html)

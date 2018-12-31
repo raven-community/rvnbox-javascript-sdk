@@ -8,7 +8,7 @@
 // Instantiate RVNBOX.
 const rvnboxLib = "../../../../lib/rvnbox-sdk"
 const RVNBOXSDK = require(rvnboxLib).default
-const RVNBOX = new RVNBOXSDK({ restURL: "https://trest.ravencoin.online/v1/" })
+const RVNBOX = new RVNBOXSDK({ restURL: "http://trest.ravencoin.online/v2/" })
 
 const fs = require("fs")
 

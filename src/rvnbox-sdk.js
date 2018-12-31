@@ -24,7 +24,7 @@ class RVNBOXSDK {
   constructor(config) {
     if (config && config.restURL && config.restURL !== "")
       this.restURL = config.restURL
-    else this.restURL = "https://rest.ravencoin.online/v1/"
+    else this.restURL = "http://trest.ravencoin.online/v2/"
 
     this.Address = new Address(this.restURL)
     this.RavenCoin = new RavenCoin(this.Address)

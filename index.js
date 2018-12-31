@@ -28,7 +28,7 @@ program
   )
   .option(
     "-r, --restURL <restURL>",
-    "The rest URL to use. default: https://trest.ravencoin.online/v1/"
+    "The rest URL to use. default: http://trest.ravencoin.online/v2/"
   )
   .option(
     "-e, --environment <environment>",
@@ -44,7 +44,7 @@ program
     let config
     const environment = fetchOption("environment=development", config, options)
     const restURL = fetchOption(
-      "restURL=https://trest.ravencoin.online/v1/",
+      "restURL=http://trest.ravencoin.online/v2/",
       config,
       options
     )

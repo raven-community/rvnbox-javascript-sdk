@@ -19,7 +19,7 @@
   "bin": {
     "rvnbox": "./index.js"
   },
-  "homepage": "https://developer.ravencoin.online/rvnbox",
+  "homepage": "http://developer.ravencoin.online/rvnbox",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/raven-community/rvnbox-javascript-sdk.git"

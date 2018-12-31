@@ -7,8 +7,8 @@
 // Instantiate RVNBOX.
 const rvnboxLib = "../../../../lib/rvnbox-sdk"
 const RVNBOXSDK = require(rvnboxLib).default
-//const RVNBOX = new RVNBOXSDK({ restURL: "https://trest.ravencoin.online/v1/" })
-const RVNBOX = new RVNBOXSDK({ restURL: "htts://localhost:3000/v1/" })
+//const RVNBOX = new RVNBOXSDK({ restURL: "http://trest.ravencoin.online/v2/" })
+const RVNBOX = new RVNBOXSDK({ restURL: "http://localhost:3000/v2/" })
 
 // Replace the address below with the address you want to send the RVN to.
 const RECV_ADDR = `rvntest:rEgfYH2ed8a3Age6qLuhXeLvSUJU4Q3sBE`

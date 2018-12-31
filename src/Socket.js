@@ -9,7 +9,7 @@ class Socket {
       if (config.restURL) {
         this.socket = io(`${config.restURL}`)
       } else {
-        const restURL = "https://rest.ravencoin.online"
+        const restURL = "http://trest.ravencoin.online"
         this.socket = io(`${restURL}`)
       }
 
