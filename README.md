@@ -4,7 +4,7 @@
 
 Extensive documentation available at:
 
-- [General docs](http://developer.ravencoin.obnline)
+- [General docs](http://developer.ravencoin.online)
 - [RVNBOX API](http://developer.ravencoin.online/rvnbox)
 
 Open Source / Creative Commons Listings
