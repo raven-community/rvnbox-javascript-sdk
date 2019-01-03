@@ -2,10 +2,7 @@
   "name": "rvnbox-sdk",
   "version": "1.0.0",
   "description": "RVNBOX Javascript SDK for Ravencoin",
-  "author": "Gabriel Cardona @ Bitcoin.com",
-  "contributors": [
-    "MSFTserver"
-  ],
+  "author": "MSFTserver",
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha --timeout 30000 --require babel-core/register",
@@ -38,13 +35,13 @@
     "bip39": "^2.5.0",
     "bip66": "^1.1.5",
     "bc-bip68": "^1.0.5",
-    "ravencoin-ops": "github:raven-community/ravencoin-ops#master",
-    "ravencoin-txdecoder": "github:raven-community/node-ravencoin-txdecoder#master",
+    "ravencoin-ops": "^1.0.0",
+    "ravencoin-txdecoder": "^1.0.0",
     "ravencoinjs-lib": "github:raven-community/ravencoinjs-lib#master",
-    "ravencoinjs-message": "github:raven-community/ravencoinjs-message#master",
+    "ravencoinjs-message": "^1.0.0",
     "bs58": "^4.0.1",
     "buffer": "^5.1.0",
-    "rvnaddrjs": "github:raven-community/rvnaddrjs#master",
+    "rvnaddrjs": "^1.0.0",
     "chalk": "^2.3.0",
     "clear": "0.0.1",
     "coininfo": "github:raven-community/coininfo#master",
@@ -61,11 +58,11 @@
     "randombytes": "^2.0.6",
     "repl.history": "^0.1.4",
     "safe-buffer": "^5.1.2",
-    "satoshi-ravencoin": "github:raven-community/satoshi-ravencoin#master",
+    "satoshi-ravencoin": "^1.0.0",
     "socket.io": "^2.1.1",
     "socket.io-client": "^2.1.1",
     "touch": "^3.1.0",
-    "rvn-wallet-bridge.js": "github:raven-community/rvn-wallet-bridge.js#master",
+    "rvn-wallet-bridge.js": "^1.0.0",
     "wif": "^2.0.6"
   },
   "devDependencies": {
