@@ -1,6 +1,6 @@
 {
   "name": "rvnbox-sdk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "RVNBOX Javascript SDK for Ravencoin",
   "author": "MSFTserver",
   "main": "index.js",
