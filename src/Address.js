@@ -21,7 +21,7 @@ class Address {
         ravencoin = coininfo.ravencoin.test
         break
       case "rvnreg":
-        ravencoin = coininfo.ravencoin.regtest
+        ravencoin = coininfo.ravencoin.test
         break
       default:
         throw `unsupported prefix : ${prefix}`

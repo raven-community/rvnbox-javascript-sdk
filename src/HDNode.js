@@ -7,7 +7,7 @@ class HDNode {
     this._address = address
   }
 
-  fromSeed(rootSeedBuffer, network = "ravencoin") {
+  fromSeed(rootSeedBuffer, network = "testnet") {
     let ravencoin
     if (network === "ravencoin") ravencoin = coininfo.ravencoin.main
     else ravencoin = coininfo.ravencoin.test

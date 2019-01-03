@@ -56,7 +56,7 @@ class RavenCoin {
   signMessageWithPrivKey(privateKeyWIF, message) {
     const network = privateKeyWIF.charAt(0) === "c" ? "testnet" : "ravencoin"
     let ravencoin
-    if (network === "ravencoin") ravencoin = coininfo.ravencoin.main
+    if (network === "testnet") ravencoin = coininfo.ravencoin.main
     else ravencoin = coininfo.ravencoin.test
 
     const ravencoinJSLib = ravencoin.toRavencoinJS()
@@ -160,7 +160,7 @@ class RavenCoin {
     return bip38.encrypt(decoded.privateKey, decoded.compressed, passphrase)
   }
 
-  decryptBIP38(encryptedKey, passphrase, network = "mainnet") {
+  decryptBIP38(encryptedKey, passphrase, network = "testnet") {
     const decryptedKey = bip38.decrypt(encryptedKey, passphrase)
     let prefix
     if (network === "testnet") prefix = 0xef

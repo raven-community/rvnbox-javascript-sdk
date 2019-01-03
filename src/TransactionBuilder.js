@@ -8,7 +8,7 @@ class TransactionBuilder {
     TransactionBuilder._address = address
   }
 
-  constructor(network = "ravencoin") {
+  constructor(network = "testnet") {
     let ravencoin
     if (network === "ravencoin") ravencoin = coininfo.ravencoin.main
     else ravencoin = coininfo.ravencoin.test
