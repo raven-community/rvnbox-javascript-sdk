@@ -1,6 +1,6 @@
 {
   "name": "rvnbox-sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "RVNBOX Javascript SDK for Ravencoin",
   "author": "MSFTserver",
   "main": "index.js",
@@ -36,9 +36,9 @@
     "bip66": "^1.1.5",
     "bc-bip68": "^1.0.5",
     "ravencoin-ops": "^1.0.0",
-    "ravencoin-txdecoder": "^1.0.1",
-    "ravencoinjs-lib": "github:raven-community/ravencoinjs-lib/tree/1.0.0",
-    "ravencoinjs-message": "^1.0.1",
+    "ravencoin-txdecoder": "^1.0.2",
+    "ravencoinjs-lib": "github:raven-community/ravencoinjs-lib#master",
+    "ravencoinjs-message": "^1.0.2",
     "bs58": "^4.0.1",
     "buffer": "^5.1.0",
     "rvnaddrjs": "^1.0.0",
@@ -62,7 +62,7 @@
     "socket.io": "^2.1.1",
     "socket.io-client": "^2.1.1",
     "touch": "^3.1.0",
-    "rvn-wallet-bridge.js": "^1.0.1",
+    "rvn-wallet-bridge.js": "^1.0.2",
     "wif": "^2.0.6"
   },
   "devDependencies": {
