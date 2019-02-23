@@ -19,6 +19,7 @@ import Script from "./Script"
 import Price from "./Price"
 import Socket from "./Socket"
 import Wallet from "./Wallet"
+import Asset from "./Asset"
 
 class RVNBOXSDK {
   constructor(config) {
@@ -48,6 +49,7 @@ class RVNBOXSDK {
     this.Util = new Util(this.restURL)
     this.Socket = Socket
     this.Wallet = Wallet
+    this.Asset = new Asset(this.restURL)
   }
 }
 

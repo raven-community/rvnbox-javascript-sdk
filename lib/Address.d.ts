@@ -25,13 +25,13 @@ export declare interface Address {
 
 export declare interface AddressDetailsResult {
     balance: number;
-    balanceSatoshi: number;
+    balanceSat: number;
     totalReceived: number;
-    totalReceivedSatoshi: number;
+    totalReceivedSat: number;
     totalSent: number;
-    totalSentSatoshi: number;
+    totalSentSat: number;
     unconfirmedBalance: number;
-    unconfirmedBalanceSatoshi: number;
+    unconfirmedBalanceSat: number;
     unconfirmedTxApperances: number;
     txApperances: number;
     transactions: string[];

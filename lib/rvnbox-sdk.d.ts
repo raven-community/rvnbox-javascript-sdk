@@ -11,6 +11,7 @@ import { Network } from './Network';
 import { RawTransactions } from './RawTransactions';
 import { Mnemonic } from './Mnemonic';
 import { Address } from './Address';
+import { Asset } from './Asset';
 import { HDNode } from './HDNode';
 import { Transaction } from './Transaction';
 import { TransactionBuilder } from './TransactionBuilder';
@@ -25,7 +26,8 @@ declare class RVNBOXSDK {
 	constructor(config?: any);
 
 	restURL: string;
-	Address: Address;
+  Address: Address;
+  Asset: Asset;
 	RavenCoin: RavenCoin;
 	Block: Block;
 	Blockchain: Blockchain;
